@@ -4,30 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
   
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
+</head>
+<style>
+  footer {
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+</style>
 </head>
 <body>
-
-  We're coming soon
-
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
-  Email Address
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+<header class="header">
+  <div class="header__logo"><img src="images/logo.svg" alt="Base Apparel Logo" /></div>
+</header>
+<main class="hero">
+  <div class="hero__image">
+    <picture>
+      <source media="(min-width: 1000px)" srcset="images/hero-desktop.jpg" />
+      <source media="(max-width: 999px)" srcset="images/hero-mobile.jpg" />
+      <img src="images/hero-mobile.jpg" alt="woman in orange shirt" />
+    </picture>
+  </div>
+  <div class="hero__body">
+    <h1 class="hero__header">
+      <span class="hero__header--light">We're</span><br />
+      coming<br />
+      soon
+    </h1>
+    <p class="hero__text">
+      Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date
+      with announcements and our launch deals.
     </p>
-  </footer>
-</body>
+    <form name="signup-form" class="form" onsubmit="return validate()">
+      <div class="form__row">
+        <input
+          class="form__input"
+          type="text"
+          name="email"
+          placeholder="Email Address"
+          aria-label="email address input field"
+        />
+        <img src="images/icon-error.svg" alt="red round icon with exclamation point" class="form__error-icon" />
+        <button id="form__button" type="submit" class="form__button">
+          <img src="images/icon-arrow.svg" alt="right arrow icon" />
+        </button>
+      </div>
+      <span class="form__error-text">Please provide a valid email</span>
+    </form>
+  </div>
+</main>
+<footer>
+  <p class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+    <a href="https://github.com/Bakir-Rizvi">Bakir Rizvi</a>.
+  </p>
+</footer>
+<script src="script.js"></script>
+<body>
+
+ 
 </html>
